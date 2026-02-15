@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HortApp - Gestiona el teu hort fàcilment">
+    <title>HortApp - El teu hort al mòbil</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- SELECTOR D'IDIOMA -->
+    <div class="language-selector">
+        <button onclick="changeLanguage('ca')" id="lang-ca" class="active">🇦🇩 CA</button>
+        <button onclick="changeLanguage('es')" id="lang-es">🇪🇸 ES</button>
+        <button onclick="changeLanguage('en')" id="lang-en">🇬🇧 EN</button>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>🌱 HortApp</h1>
+        <p data-i18n="hero-subtitle">Gestiona el teu hort de manera fàcil i eficient</p>
+        <div class="download-buttons">
+            <a href="#" class="btn">📱 <span data-i18n="download-ios">Descarregar iOS</span></a>
+            <a href="#" class="btn">🤖 <span data-i18n="download-android">Descarregar Android</span></a>
+        </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="screenshots">
+        <h2 data-i18n="screenshots-title">Captures de l'app</h2>
+        <div class="screenshots-grid">
+            <!-- Screenshot 1 -->
+            <div class="screenshot">
+                <!-- IMATGE: Posa aquí la captura dels horts -->
+                <img src="screenshot-horts.png" alt="Horts" class="screenshot-img">
+                <!-- FALLBACK si no hi ha imatge: -->
+                <div class="screenshot-placeholder">
+                    <div class="screenshot-icon">🏡</div>
+                    <h3 data-i18n="screenshot1-title">Els teus horts</h3>
+                    <p data-i18n="screenshot1-desc">Crea i organitza múltiples horts amb sectors</p>
+                </div>
+            </div>
+
+            <!-- Screenshot 2 -->
+            <div class="screenshot">
+                <!-- IMATGE: Posa aquí la captura de plantes -->
+                <img src="screenshot-plantes.png" alt="Plantes" class="screenshot-img">
+                <!-- FALLBACK si no hi ha imatge: -->
+                <div class="screenshot-placeholder">
+                    <div class="screenshot-icon">🌿</div>
+                    <h3 data-i18n="screenshot2-title">Control de plantes</h3>
+                    <p data-i18n="screenshot2-desc">Registra totes les teves plantes i cultius</p>
+                </div>
+            </div>
+
+            <!-- Screenshot 3 -->
+            <div class="screenshot">
+                <!-- IMATGE: Posa aquí la captura d'estadístiques -->
+                <img src="screenshot-stats.png" alt="Estadístiques" class="screenshot-img">
+                <!-- FALLBACK si no hi ha imatge: -->
+                <div class="screenshot-placeholder">
+                    <div class="screenshot-icon">📊</div>
+                    <h3 data-i18n="screenshot3-title">Estadístiques</h3>
+                    <p data-i18n="screenshot3-desc">Visualitza producció i temps invertit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <h2 data-i18n="features-title">Funcionalitats</h2>
+        <div class="features-list">
+            <div class="feature">
+                <div class="feature-icon">📝</div>
+                <h3 data-i18n="feature1-title">Tasques</h3>
+                <p data-i18n="feature1-desc">Registra reg, poda, adobat i collites</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🌍</div>
+                <h3 data-i18n="feature2-title">Multiidioma</h3>
+                <p data-i18n="feature2-desc">Català, Castellà i Anglès</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <h3 data-i18n="feature3-title">Privat</h3>
+                <p data-i18n="feature3-desc">Les teves dades només al teu mòbil</p>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <h3 data-i18n="feature4-title">Fàcil d'utilitzar</h3>
+                <p data-i18n="feature4-desc">Interfície intuïtiva i ràpida</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-links">
+            <a href="Privacitat.html"  data-i18n="footer-privacy">Privacitat</a>
+            <a href="Termes.html"  data-i18n="footer-terms">Termes</a>
+            <a href="mailto:hortapp@example.com" data-i18n="footer-contact">Contacte</a>
+        </div>
+        <p data-i18n="footer-copyright">© 2026 HortApp - Fet amb ❤️ per a hortolans</p>
+    </footer>
+
+    <!-- MODALS -->
+    <div id="privacy" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal('privacy')">&times;</button>
+            <h2 data-i18n="privacy-title">Política de Privacitat</h2>
+            
+            <h3 data-i18n="privacy-h1">Dades que recollim</h3>
+            <p data-i18n="privacy-p1"><strong>Cap.</strong> HortApp no recoll cap dada personal. Tota la informació es guarda exclusivament al teu dispositiu.</p>
+            
+            <h3 data-i18n="privacy-h2">Emmagatzematge</h3>
+            <p data-i18n="privacy-p2">Les dades dels teus horts, plantes i tasques s'emmagatzemen localment mitjançant AsyncStorage. Mai surten del teu telèfon.</p>
+            
+            <h3 data-i18n="privacy-h3">Sense seguiment</h3>
+            <p data-i18n="privacy-p3">No utilitzem analítica, seguiment ni publicitat. La teva privacitat és total.</p>
+            
+            <p data-i18n="privacy-updated"><em>Última actualització: Febrer 2025</em></p>
+        </div>
+    </div>
+
+    <div id="terms" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal('terms')">&times;</button>
+            <h2 data-i18n="terms-title">Termes i Condicions</h2>
+            
+            <h3 data-i18n="terms-h1">Ús de l'aplicació</h3>
+            <p data-i18n="terms-p1">HortApp és una eina de gestió d'horts per a ús personal. Ets responsable de les dades que introdueixes.</p>
+            
+            <h3 data-i18n="terms-h2">Propietat intel·lectual</h3>
+            <p data-i18n="terms-p2">El codi i disseny d'HortApp són propietat dels seus creadors.</p>
+            
+            <h3 data-i18n="terms-h3">Limitació de responsabilitat</h3>
+            <p data-i18n="terms-p3">L'app es proporciona "tal qual". No garantim que estigui lliure d'errors. No ens fem responsables de pèrdues de dades.</p>
+            
+            <h3 data-i18n="terms-h4">Llicències</h3>
+            <p data-i18n="terms-p4">HortApp utilitza biblioteques de codi obert amb llicències MIT i Apache 2.0.</p>
+            
+            <p data-i18n="terms-updated"><em>Última actualització: Febrer 2025</em></p>
+        </div>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
